@@ -9,4 +9,16 @@ Scenario: Como usuario deseo cambiar la contrasena de mi cuenta
   And I enter password "<OldPass>"
   And I wait for 2 seconds
   And I click next
+  And I wait for 2 seconds
+  And I click settings icon
+  And I wait for 2 seconds
+  And I click Staff icon
+  And I wait for 2 seconds
+  And I click on user info
+  And I wait for 2 seconds
+  And I enter the old password "<OldPass>"
+  And I wait for 2 seconds
+  And I enter the new password "<NewPass>"
+  And I verify the new password "<NewPass>"
+ 
 

@@ -43,6 +43,8 @@ node_modules/
 jspm_packages/
 reports/
 .kraken
+reports/.DS_Store
+features/.DS_Store
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
