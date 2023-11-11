@@ -1,31 +1,46 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
-When('I enter email {string}', async function (email) {
-    let element = await this.driver.$('#email');
+When('I enter email {kraken-string}', async function (email) {
+    let element = await this.driver.$('#identification');
     return await element.setValue(email);
 });
 
-When('I enter password {string}', async function (password) {
-    let element = await this.driver.$('#pass');
+When('I enter password {kraken-string}', async function (password) {
+    let element = await this.driver.$('#password');
     return await element.setValue(password);
 });
 
 When('I click next', async function() {
-    let element = await this.driver.$('#loginbutton');
+    let element = await this.driver.$('#ember5');
     return await element.click();
 })
 
-Then('I click on the first conversation', async function () {
-    let element = await this.driver.$('.x1av1boa > div:nth-child(1) > div:nth-child(1)');
+When('I click settings icon', async function() {
+    let element = await this.driver.$('#ember34');
     return await element.click();
-});
+})
 
-Then('I click on the redact message inputbox', async function () {
-    let element = await this.driver.$('p.xat24cr');
+When('I click Staff icon', async function() {
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/div[2]/a[4]');
     return await element.click();
-  });
+})
 
-Then('I send the message', async function () {
-    let element = await this.driver.$('span.x3nfvp2:nth-child(3)');
+When('I click on user info', async function() {
+    let element = await this.driver.$('.apps-card-app');
     return await element.click();
-});
+})
+When('I enter the old password {kraken-string}', async function(password) {
+    let element = await this.driver.$('#user-password-old');
+    return await element.setValue(password);
+})
+
+When('I enter the new password {kraken-string}', async function(password) {
+    let element = await this.driver.$('#user-password-new');
+    return await element.setValue(password);
+})
+
+When('I verify the new password {kraken-string}', async function(password) {
+    let element = await this.driver.$('#user-password-new');
+    return await element.setValue(password);
+})
+//-------------------------------------------------------
