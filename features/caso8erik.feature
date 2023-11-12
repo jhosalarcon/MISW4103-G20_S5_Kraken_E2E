@@ -17,7 +17,7 @@ And I type my bad member note
 And I click to save my bad member
 Then I validate the bad response
 And I wait for 2 seconds
-And I click on members
+And I click member leave
 And I wait for 2 seconds
 And I click leave form
 And I wait for 2 seconds

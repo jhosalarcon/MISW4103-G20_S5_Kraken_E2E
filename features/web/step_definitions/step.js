@@ -53,60 +53,60 @@ When('I click my avatar', async function() {
     return await element.click();
 })
 When('I click my profile', async function() {
-    let element = await this.driver.$('a:contains("Your profile")');
+    let element = await this.driver.$('/html[1]/body[1]/div[1]/div[1]/ul[1]/li[4]/a[1]');
     return await element.click();
 })
 When('I clear my name', async function() {
-    let element = await this.driver.$('input.peer').eq(0);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.clear();
 })
 When('I type my new name', async function() {
-    let element = await this.driver.$('input.peer').eq(0);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.setValue("Erik editado");
 })
 When('I clear my sludge', async function() {
-    let element = await this.driver.$('input.peer').eq(2);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/input[1]');
     return await element.clear();
 })
 When('I type my new sludge', async function() {
-    let element = await this.driver.$('input.peer').eq(2);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/input[1]');
     return await element.setValue("slugeditado");
 })
 When('I clear my country', async function() {
-    let element = await this.driver.$('input.peer').eq(3);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.clear();
 })
 When('I type my new country', async function() {
-    let element = await this.driver.$('input.peer').eq(3);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.setValue("colombia editado");
 })
 When('I save my profile edited', async function() {
-    let element = await this.driver.$('span:contains("Save & close")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[2]/div[2]/div[1]/div[2]/div[1]/button[2]/span[1]');
     return await element.click();
 })
 Then('I validate my new name', async function() {
-    let element = await this.driver.$('span:contains("Erik editado")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[9]/div[3]/div[2]/span[1]');
     let text = await element.getText();
     assert.include(text, "Erik editado")
 })
 When('I click my edited profile', async function() {
-    let element = await this.driver.$('span:contains("Erik editado")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[9]/div[3]/div[2]/span[1]');
     return await element.click();
 })
 When('I type my old name', async function() {
-    let element = await this.driver.$('input.peer').eq(0);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.setValue("Erik");
 })
 When('I type my old sludge', async function() {
-    let element = await this.driver.$('input.peer').eq(2);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/input[1]');
     return await element.setValue("slug");
 })
 When('I type my old country', async function() {
-    let element = await this.driver.$('input.peer').eq(3);
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/input[1]');
     return await element.click();
 })
 Then('I validate my old name', async function() {
-    let element = await this.driver.$('span:contains("Erik")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div[9]/div[3]/div[2]/span[1]');
     let text = await element.getText();
     assert.include(text, "Erik")
 })
@@ -114,7 +114,7 @@ Then('I validate my old name', async function() {
 //--------------Caso 7-----------------------------//
 
 When('I click on members', async function() {
-    let element = await this.driver.$('a:contains("Members")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/nav[1]/div[1]/section[1]/div[1]/ul[2]/li[4]/a[1]');
     return await element.click();
 })
 When('I click on member actions', async function() {
@@ -122,23 +122,23 @@ When('I click on member actions', async function() {
     return await element.click();
 })
 When('I click on import members', async function() {
-    let element = await this.driver.$('span:contains("Import members")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/section[1]/div[2]/span[1]/ul[1]/li[1]/a[1]');
     return await element.click();
 })
 When('I drop a csv file', async function() {
     const filePath = 'features\fixtures\cargar_miembros.csv';
     const fileContent = fs.readFileSync(filePath, 'utf8');
-    let element = await this.driver.$('label:contains("Select or drop a CSV file")');
+    let element = await this.driver.$('/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/div[1]/section[1]/span[1]/label[1]');
     await element.click();
     await this.driver.$('input[type="file"]').uploadFile(filePath);
     return fileContent;
 })
 When('I click on import members button', async function() {
-    let element = await this.driver.$('button:contains("Import 1 member")');
+    let element = await this.driver.$('/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[2]/button[2]/span[1]');
     return await element.click();
 })
 Then('I validate the error', async function() {
-    let element = await this.driver.$('p.ma0.pa0:contains("An unexpected error occurred, please try again")');
+    let element = await this.driver.$('/html[1]/body[1]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/section[1]/div[1]/div[1]/div[1]/p[1]');
     let text = await element.getText();
     assert.include(text, "An unexpected error occurred, please try again");
 })
@@ -146,7 +146,7 @@ Then('I validate the error', async function() {
 //--------------Caso 8-----------------------------//
 
 When('I create a new bad member', async function() {
-    let element = await this.driver.$('a:contains("New member")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/section[1]/div[2]/a[1]/span[1]');
     return await element.click();
 })
 When('I type my bad member name', async function() {
@@ -162,16 +162,20 @@ When('I type my bad member note', async function() {
     return await element.setValue("Esto es una prueba de crear miembro de manera negativa");
 })
 When('I click to save my bad member', async function() {
-    let element = await this.driver.$('button:contains("Save")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/section[1]/button[1]/span[1]');
     return await element.click();
 })
 Then('I validate the bad response', async function() {
-    let element = await this.driver.$('p.response:contains("Invalid Email.")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[2]/form[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/p[1]');
     let text = await element.getText();
     assert.include(text, "Invalid Email.");
 })
+When('I click member leave', async function(){
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/div[1]/div[1]/a[1]');
+    return await element.click();
+})
 When('I click leave form', async function() {
-    let element = await this.driver.$('button:contains("Leave")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/div[1]/header[1]/div[1]/div[1]/a[1]');
     return await element.click();
 })
 Then('I validate bad member dont exist', async function() {
@@ -195,7 +199,7 @@ When('I clear my bad member note', async function() {
     return await element.clear();
 })
 Then('I validate bad member doesnt change', async function() {
-    let element = await this.driver.$('a.gh-list-data:contains("Erik")")');
+    let element = await this.driver.$('a.gh-list-data');
     let text = await element.getText();
     assert.include(text, "Erik");
 })
@@ -215,7 +219,7 @@ When('I click on the results', async function() {
     return await element.click();
 })
 Then('I validate the results of the searchbar', async function() {
-    let element = await this.driver.$('span[data-test-task-button-state="idle"]:contains("Update")")');
+    let element = await this.driver.$('/html[1]/body[1]/div[2]/div[1]/main[1]/div[1]/section[1]/header[1]/section[1]/button[1]/span[1]');
     let text = await element.getText();
     assert.include(text, "Update");
 })
