@@ -1,3 +1,4 @@
+/** 
 
 const { Given, When, Then } = require('@cucumber/cucumber');
 
@@ -54,3 +55,5 @@ When ('I click on XSave' , async function () {
     let element = await this.driver.$("(//span[normalize-space()='Save'])[1]");
     return await element.click();
 });
+
+*/
