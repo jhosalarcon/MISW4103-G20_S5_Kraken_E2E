@@ -1,48 +1,40 @@
-Feature: Iniciar una conversación
+Feature: Creacion, edicion, posrt
 
 @user1 @web
-Scenario: Como primer usuario inicio sesion y mandó un mensaje al usuario 2
-  Given I navigate to page "https://www.messenger.com/login"
-  And I wait for 5 seconds
-  When I enter email "<USERNAME1>"
+Scenario: Admin - crear editar y eliminar mi post
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  And I enter email "pruebas@correo.com"
   And I wait for 2 seconds
-  And I enter password "<PASSWORD1>"
+  And I enter password "abcde12345"
   And I wait for 2 seconds
   And I click next
-  And I wait for 7 seconds
-  Then I send a signal to user 2 containing "login1 complete"
-  And I wait for a signal containing "login2 complete" for 15 seconds
   And I wait for 2 seconds
-  And I click on the first conversation
+  And I click post icon
   And I wait for 2 seconds
-  And I click on the redact message inputbox
+  And I enter a title "E2E Post"
   And I wait for 2 seconds
-  And I enter text "Hola"
+  And I click bodys
   And I wait for 2 seconds
-  And I send the message
+  And I enter a body "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus eros in libero sagittis, at ornare leo rhoncus. Duis odio mauris, blandit ut blandit eu, luctus eu eros. Morbi quis massa in ante gravida posuere condimentum et dui. Mauris eu interdum urna. Nullam arcu ante, elementum at leo id, tincidunt sodales tellus. Etiam placerat enim et nisl tincidunt, vel aliquam leo ornare."
   And I wait for 2 seconds
-  And I send a signal to user 2 containing "message1 sent"
-  And I wait for a signal containing "message2 sent" for 15 seconds
-
-@user2 @web
-Scenario: Como usuario 2 inicio sesion y mandó un mensaje al usuario 1
-  Given I navigate to page "https://www.messenger.com/login"
-  When I wait for 2 seconds
-  When I enter email "<USERNAME2>"
+  And I click publish
   And I wait for 2 seconds
-  And I enter password "<PASSWORD2>"
-  And I wait for 7 seconds
-  And I wait for a signal containing "login1 complete" for 15 seconds
-  And I click next
-  And I wait for 7 seconds
-  And I send a signal to user 1 containing "login2 complete"
-  Then I wait for 7 seconds
-  And I click on the first conversation
-  And I wait for a signal containing "message1 sent" for 15 seconds
-  And I click on the redact message inputbox
+  And I click publish post
   And I wait for 2 seconds
-  And I enter text "Hola"
+  And I confirm the publish
   And I wait for 2 seconds
-  And I send the message
+  And I click on back to editor
   And I wait for 2 seconds
-  And I send a signal to user 1 containing "message2 sent"
+  And I click on title to edit it
+  And I wait for 2 seconds
+  And I enter a new title "EDITED"
+  And I wait for 2 seconds
+  And I click bodys again
+  And I wait for 2 seconds
+  And I enter a new body "EDITED/EDITED/EDITED"
+  And I wait for 2 seconds
+  And I click update
+  And I wait for 2 seconds
+  And I click settings post
+  And I click delete post
+  And I click confirm 
