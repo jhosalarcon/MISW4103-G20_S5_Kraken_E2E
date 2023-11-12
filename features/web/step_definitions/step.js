@@ -2,6 +2,7 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const assert = require('assert');
 const fs = require('fs');
 
+
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#identification');
     return await element.setValue(email);
@@ -45,6 +46,7 @@ When('I verify the new password {kraken-string}', async function(password) {
     let element = await this.driver.$('#user-password-new');
     return await element.setValue(password);
 })
+
 
 //------CASOS ERIK--------------------//
 //------Caso 6------------------------//
@@ -143,6 +145,8 @@ Then('I validate the error', async function() {
     assert.include(text, "An unexpected error occurred, please try again");
 })
 
+
+
 //--------------Caso 8-----------------------------//
 
 When('I create a new bad member', async function() {
@@ -199,6 +203,7 @@ Then('I validate bad member doesnt change', async function() {
     let text = await element.getText();
     assert.include(text, "Erik");
 })
+
 
 //--------------Caso 10-----------------------------//
 

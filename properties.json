@@ -1,6 +1,6 @@
 {
-    "OldPass": "Test123456",
+    "OldPass": "abcde12345",
     "NewPass": "Test654321",
-    "Email": "test@test.com",
+    "Email": "pruebas@correo.com",
     "PASSWORD2": "<Ingrese aquí la contraseña que usó para crear la segunda cuenta>"
 }
