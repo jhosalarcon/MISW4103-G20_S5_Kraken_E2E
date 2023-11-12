@@ -1,3 +1,4 @@
+/*
 const { Given, When, Then } = require('@cucumber/cucumber');
 
 When('I enter email {kraken-string}', async function (email) {
@@ -47,3 +48,5 @@ Then('I save it', async function() {
     let element = await this.driver.$("//span[normalize-space()='Save']");
     return await element.click();
 });
+
+**/
