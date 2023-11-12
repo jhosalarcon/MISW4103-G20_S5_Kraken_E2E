@@ -1,4 +1,4 @@
-Feature: Creacion, edicion, posrt
+Feature: Test generales de Ghost
 
 @user1 @web
 Scenario: Admin - crear editar y eliminar mi post
@@ -37,4 +37,39 @@ Scenario: Admin - crear editar y eliminar mi post
   And I wait for 2 seconds
   And I click settings post
   And I click delete post
-  And I click confirm 
+  Then I click confirm
+
+@user1 @web
+Scenario: TimeZone
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  And I enter email "pruebas@correo.com"
+  And I wait for 1 seconds
+  And I enter password "abcde12345"
+  And I wait for 1 seconds
+  And I click next
+  And I wait for 1 seconds
+  And I click settings
+  And I wait for 3 seconds
+  And I click on edit Timezone
+  And I write on search "TimeZone"
+  And I click on edit
+  And I click UTC
+  And I wait for 3 seconds
+  And I write new UTC "Bogota"
+  And I save it
+  Then I wait for 5 seconds
+
+  @user1 @seb
+  Scenario: XCard
+  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
+  And I enter email "pruebas@correo.com"
+  And I wait for 1 seconds
+  And I enter password "abcde12345"
+  And I wait for 1 seconds
+  And I click next
+  And I wait for 1 seconds
+  And I click settings
+  And I wait for 3 seconds
+  And I click on Search
+  And I write on search "X"
+  And I click on edit X
