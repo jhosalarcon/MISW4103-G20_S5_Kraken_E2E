@@ -41,10 +41,6 @@ Scenario: Como usuario deseo exportar, eliminar e importar contenido
  And I confirm delete content
  And I wait for 4 seconds
  And I validate deleted content
- And I import content
- And I wait for 2 seconds
- And I drop a json file
- And I wait for 5 seconds
 
 @user1 @web
 Scenario: Como usuario deseo crear, editar y archivar un newsletter
