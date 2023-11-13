@@ -1,6 +1,6 @@
 Feature: Test generales de Ghost
 
-# @user1 @web
+@user1 @web
 Scenario: Como usuario deseo cambiar la contrasena de mi cuenta
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
  When I enter email "<Email>"
