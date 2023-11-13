@@ -42,18 +42,16 @@ npm install chromedriver@119.0.1
 
 3. En MacOS, por medio de una terminal usando shell relativo a la instalación de kraken.
 
-npm install kraken-node -g
-kraken-node gen
-npm install kraken-node
-npm install -g appium
-./node_modules/kraken-node/bin/kraken-node run
+1. npm install kraken-node -g
+2. kraken-node gen
+3. npm install kraken-node
+4. npm install -g appium
+5. ./node_modules/kraken-node/bin/kraken-node run
 
 El resultado de las pruebas se comparte por medio del siguiente enlace:
 
 Favor tener en cuenta la siguiente la ruta raiz de estos features, json y js: [fuentes](https://github.com/jhosalarcon/MISW4103-G20_S5_Kraken_E2E/tree/develop/alternativa)
 
-Pruebas de funcionamiento.
-
-[pruebas-biblioteca-selenium](https://uniandes-my.sharepoint.com/:f:/g/personal/jd_fajardor1_uniandes_edu_co/Eg9VbE1CsNhAgmFdFc1ce_gBrMHMMYJHCKagrGor5vNg5w?e=ZLLkSG)
+Pruebas de funcionamiento: [pruebas-biblioteca-selenium](https://uniandes-my.sharepoint.com/:f:/g/personal/jd_fajardor1_uniandes_edu_co/Eg9VbE1CsNhAgmFdFc1ce_gBrMHMMYJHCKagrGor5vNg5w?e=ZLLkSG)
 
 
