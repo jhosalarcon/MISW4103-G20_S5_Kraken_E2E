@@ -15,9 +15,13 @@ e. Android SDK Tools
 
 Rutas PATH: 
 a. C:\Users\***\AppData\Local\Android\Sdk\platform-tools
+
 b. C:\Users\***\AppData\Local\Android\Sdk\tools
+
 c. C:\Users\***\AppData\Local\Android\Sdk\build-tools\VERSION
+
 d. C:\Users\***\AppData\Local\Android\Sdk
+
 e. JAVA_HOME: C:\Program Files\Android\Android Studio\jre
 
 Set up:
