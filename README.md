@@ -26,18 +26,33 @@ Set up:
 7. npx kraken-node run
 
 
-README CASOS DE PRUEBA_JAVIER DARIO FAJARDO
+## README CASOS DE PRUEBA_JAVIER DARIO FAJARDO
 Casos[11,12,13,14,15]
 
 Prerequisitos:
 Node.js: v14.20.0
 
 Set up:
-1.Selenium WebDriver y los drivers para Chrome:
-2.npm install selenium-webdriver@4.15.0
-3.npm install chromedriver@119.0.1
+1. Tener instalado version de Node.js v14.20.0.
+2. Instalación de dependencias
+
+npm install geckodriver@4.2.1
+npm install selenium-webdriver@4.15.0
+npm install chromedriver@119.0.1
+
+3. En MacOS, por medio de una terminal usando shell relativo a la instalación de kraken.
+
+npm install kraken-node -g
+kraken-node gen
+npm install kraken-node
+npm install -g appium
+./node_modules/kraken-node/bin/kraken-node run
 
 El resultado de las pruebas se comparte por medio del siguiente enlace:
+
+Favor tener en cuenta la siguiente la ruta raiz de estos features, json y js: [fuentes](https://github.com/jhosalarcon/MISW4103-G20_S5_Kraken_E2E/tree/develop/alternativa)
+
+Pruebas de funcionamiento.
 
 [pruebas-biblioteca-selenium](https://uniandes-my.sharepoint.com/:f:/g/personal/jd_fajardor1_uniandes_edu_co/Eg9VbE1CsNhAgmFdFc1ce_gBrMHMMYJHCKagrGor5vNg5w?e=ZLLkSG)
 
