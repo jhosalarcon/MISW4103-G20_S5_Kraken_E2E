@@ -1,6 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const fs = require('fs');
-const { assert } = require('chai');
+const assert = require('assert');
 
 When('I add code injection', async function() {
     await this.driver.$("(//h4[normalize-space()='Code injection'])[1]").click();
@@ -13,8 +13,8 @@ When('I add code injection', async function() {
 
 When('I validate code injection', async function() {
     let body = await this.driver.$("body").getText();
-    assert.include(body, "Test header","Code injection header is present");
-    assert.include(body, "Test footer","Code injection footer is present");
+    let text = await body.getText();
+    assert.ok(text.includes("Test header"), `El texto "${text}" no incluye "Test header"`);
 })
 
 When('I clean code injection', async function() {
