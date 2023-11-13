@@ -15,7 +15,7 @@ C:\Users\***\AppData\Local\Android\Sdk
 JAVA_HOME: C:\Program Files\Android\Android Studio\jre
 
 Set up:
-1. cd /folder_trabajo/
+1. cd ../KrakenTest/
 2. npm install kraken-node -g
 3. kraken-node gen
 4. pm install kraken-node
