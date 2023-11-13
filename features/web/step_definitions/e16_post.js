@@ -1,4 +1,3 @@
-/**
 const { Given, When, Then } = require('@cucumber/cucumber');
 
 When('I enter email {kraken-string}', async function (email) {
@@ -96,4 +95,3 @@ Then('I click confirm', async function() {
     return await element.click();
 });
 
-**/

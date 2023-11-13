@@ -1,5 +1,5 @@
 
-/** 
+
 const { Given, When, Then } = require('@cucumber/cucumber');
 
 When('I enter email {kraken-string}', async function (email) {
@@ -57,4 +57,3 @@ When ('I click on MetaSave' , async function () {
     return await element.click();
 });
 
-*/

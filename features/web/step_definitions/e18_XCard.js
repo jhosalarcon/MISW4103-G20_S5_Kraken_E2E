@@ -1,4 +1,4 @@
-/** 
+
 
 const { Given, When, Then } = require('@cucumber/cucumber');
 
@@ -56,4 +56,3 @@ When ('I click on XSave' , async function () {
     return await element.click();
 });
 
-*/
