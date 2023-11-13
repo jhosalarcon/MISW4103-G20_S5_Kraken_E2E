@@ -4,9 +4,13 @@ Casos[1,2,3,4,5,6,7,8,9,10,16,17,18,19,20]
 
 Prerequisitos: 
 a. Node.Js: 16.14.2
+
 b. Android Studio
+
 c. Android SDK Platform-Tools
+
 d. Android SDK Build-Tools
+
 e. Android SDK Tools 
 
 Rutas PATH: 
