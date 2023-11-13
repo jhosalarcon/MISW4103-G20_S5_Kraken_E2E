@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "geckodriver": "^4.2.1",
+    "kraken-node": "^1.0.24",
+    "selenium-webdriver": "^4.15.0"
+  },
+  "devDependencies": {
+    "chromedriver": "^119.0.1"
+  }
+}
