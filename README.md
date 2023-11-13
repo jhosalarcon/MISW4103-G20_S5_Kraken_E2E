@@ -36,9 +36,9 @@ Set up:
 1. Tener instalado version de Node.js v14.20.0.
 2. Instalación de dependencias
 
-npm install geckodriver@4.2.1
-npm install selenium-webdriver@4.15.0
-npm install chromedriver@119.0.1
+1. npm install geckodriver@4.2.1
+2. npm install selenium-webdriver@4.15.0
+3. npm install chromedriver@119.0.1
 
 3. En MacOS, por medio de una terminal usando shell relativo a la instalación de kraken.
 
