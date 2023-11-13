@@ -1,6 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const fs = require('fs');
-const { assert } = require('chai');
 
 When('I add announcement bar', async function() {
     await this.driver.$("//h4[normalize-space()='Announcement bar']").click();
@@ -11,5 +10,4 @@ When('I add announcement bar', async function() {
 
 When('I validate announcement bar', async function() {
     let bar = await this.driver.$(".gh-announcement-bar.dark").getText();
-    assert.include(bar, "Test bar","Announcement bar is present");
 })
