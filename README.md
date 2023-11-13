@@ -3,18 +3,18 @@
 Casos[1,2,3,4,5,6,7,8,9,10,16,17,18,19,20]
 
 Prerequisitos: 
-Node.Js: 16.14.2
-Android Studio
-Android SDK Platform-Tools
-Android SDK Build-Tools
-Android SDK Tools 
+a. Node.Js: 16.14.2
+b. Android Studio
+c. Android SDK Platform-Tools
+d. Android SDK Build-Tools
+e. Android SDK Tools 
 
 Rutas PATH: 
-C:\Users\***\AppData\Local\Android\Sdk\platform-tools
-C:\Users\***\AppData\Local\Android\Sdk\tools
-C:\Users\***\AppData\Local\Android\Sdk\build-tools\VERSION
-C:\Users\***\AppData\Local\Android\Sdk
-JAVA_HOME: C:\Program Files\Android\Android Studio\jre
+a. C:\Users\***\AppData\Local\Android\Sdk\platform-tools
+b. C:\Users\***\AppData\Local\Android\Sdk\tools
+c. C:\Users\***\AppData\Local\Android\Sdk\build-tools\VERSION
+d. C:\Users\***\AppData\Local\Android\Sdk
+e. JAVA_HOME: C:\Program Files\Android\Android Studio\jre
 
 Set up:
 1. cd ../KrakenTest/
