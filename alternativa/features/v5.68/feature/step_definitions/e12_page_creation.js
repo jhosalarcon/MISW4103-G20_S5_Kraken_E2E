@@ -6,9 +6,9 @@ const fs = require('fs');
 
 let driver;
 
-const baseUrl = 'http://localhost:2368/ghost';
-const username = 'lordmkichavi@gmail.com';
-const password = 'Corinna2019*';
+const baseUrl = 'http://localhost:3001/ghost';
+const username = 'pruebas@correo.com';
+const password = 'Test654321';
 
 async function initializeDriver() {
     let options = new chrome.Options();
