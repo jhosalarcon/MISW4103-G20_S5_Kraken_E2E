@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="reports">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/alternativa/features/reports/pruebas_e12_page_creation.zip!/" />
+      <root url="jar://$PROJECT_DIR$/alternativa/features/reports/pruebas_e11_dashboard_review.zip!/" />
+      <root url="jar://$PROJECT_DIR$/alternativa/features/reports/pruebas_e14_create_tag.zip!/" />
+      <root url="jar://$PROJECT_DIR$/alternativa/features/reports/pruebas_e13_create_draft.zip!/" />
+      <root url="jar://$PROJECT_DIR$/alternativa/features/reports/pruebase15_theme_verification.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
