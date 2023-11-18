@@ -1,9 +1,9 @@
-Feature: Escenarios de prueba e2e
+Feature: Escenarios de prueba E2E
 
 @user1 @web
-Scenario: caso 1 Como usuario deseo cambiar la contrasena de mi cuenta
+Scenario: Caso 1: Como usuario deseo cambiar la contrasena de mi cuenta
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
- When I enter email "<Email>"
+ And I enter email "<Email>"
  And I enter password "<OldPass>"
  And I click next
  And I click settings icon
@@ -12,8 +12,9 @@ Scenario: caso 1 Como usuario deseo cambiar la contrasena de mi cuenta
  And I enter the old password "<OldPass>"
  And I enter the new password "<NewPass>"
  And I verify the new password "<NewPass>"
- And I change the password
- And I wait for 8 seconds  And I go to logout
+ When I change the password
+ And I wait for 8 seconds  
+ And I go to logout
  And I press the button sign out
  And I enter email "<Email>"
  And I enter password "<NewPass>"
@@ -24,63 +25,63 @@ Scenario: caso 1 Como usuario deseo cambiar la contrasena de mi cuenta
  And I enter the old password "<NewPass>"
  And I enter the new password "<OldPass>"
  And I verify the new password "<OldPass>"
- And I change the password
+ Then I change the password
 
 
 @user2 @web
-Scenario: caso 2 Como usuario deseo exportar, eliminar e importar contenido
+Scenario: Caso 2: Como usuario deseo exportar, eliminar e importar contenido
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
- When I enter email "<Email>"
+ And I enter email "<Email>"
  And I enter password "<OldPass>"
  And I click next
  And I click settings icon
- And I click Labs icon
+ When I click Labs icon
  And I click on export icon
  And I wait for 4 seconds
  And I click on delete icon
  And I confirm delete content
  And I wait for 4 seconds
- And I validate deleted content
+ Then I validate deleted content
 
 @user3 @web
-Scenario: caso 3 Como usuario deseo crear, editar y archivar un newsletter
+Scenario: Caso 3: Como usuario deseo crear, editar y archivar un newsletter
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
- When I enter email "<Email>"
+ And I enter email "<Email>"
  And I enter password "<OldPass>"
  And I click next
  And I click settings icon
  And I add a newsletter
  And I wait for 2 seconds
- And I validate new newsletter
+ When I validate new newsletter
  And I edit a newsletter
  And I wait for 2 seconds
  And I validate edit newsletter
- And I archive newsletter
+ Then I archive newsletter
  And I wait for 2 seconds
 
 @user4 @web
-Scenario: caso 4 Como usuario deseo agregar un code injection a mi sitio
+Scenario: Caso 4: Como usuario deseo agregar un code injection a mi sitio
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
- When I enter email "<Email>"
+ And I enter email "<Email>"
  And I enter password "<OldPass>"
  And I click next
  And I click settings icon
- And I add code injection
+ When I add code injection
  And I wait for 2 seconds
  And I navigate to page "http://localhost:2368/"
- And I validate code injection
+ Then I validate code injection
 
 @user5 @web
-Scenario: caso 5 Como usuario deseo agregar un announcement bar
+Scenario: Caso 5: Como usuario deseo agregar un announcement bar
  Given I navigate to page "http://localhost:2368/ghost/#/dashboard"
- When I enter email "<Email>"
+ And I enter email "<Email>"
  And I enter password "<OldPass>"
  And I click next
  And I click settings icon
- And I add announcement bar
+ When I add announcement bar
  And I wait for 2 seconds
  And I navigate to page "http://localhost:2368/"
- And I validate announcement bar
+ Then I validate announcement bar
 
 @user6 @web
 Scenario: caso 6 Modificar y validar acciones de mi perfil de ghost
@@ -119,15 +120,15 @@ Then I validate my old name
 @user7 @web
 Scenario: caso 7 Importar miembros desde un archivo csv
 Given I navigate to page "http://localhost:2368/ghost"
-When I enter email "<Email>"
+And I enter email "<Email>"
 And I enter password "<OldPass>"
 And I click next
 And I wait for 2 seconds
-And I click on members
+When I click on members
 And I wait for 2 seconds
 And I click on member actions
 And I wait for 2 seconds
-And I click on import members
+Then I click on import members
 And I wait for 2 seconds
 
 
@@ -218,31 +219,31 @@ And I click post icon
 And I wait for 2 seconds
 And I enter a title "E2E Post"
 And I wait for 2 seconds
-  And I click bodys
-  And I wait for 2 seconds
-  And I enter a body "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus eros in libero sagittis, at ornare leo rhoncus. Duis odio mauris, blandit ut blandit eu, luctus eu eros. Morbi quis massa in ante gravida posuere condimentum et dui. Mauris eu interdum urna. Nullam arcu ante, elementum at leo id, tincidunt sodales tellus. Etiam placerat enim et nisl tincidunt, vel aliquam leo ornare."
-  And I wait for 2 seconds
-  And I click publish
-  And I wait for 2 seconds
-  And I click publish post
-  And I wait for 2 seconds
-  And I confirm the publish
-  And I wait for 2 seconds
-  And I click on back to editor
-  And I wait for 2 seconds
-  And I click on title to edit it
-  And I wait for 2 seconds
-  And I enter a new title "EDITED"
-  And I wait for 2 seconds
-  And I click bodys again
-  And I wait for 2 seconds
-  And I enter a new body "EDITED/EDITED/EDITED"
-  And I wait for 2 seconds
-  And I click update
-  And I wait for 2 seconds
-  And I click settings post
-  And I click delete post
-  Then I click confirm
+And I click bodys
+And I wait for 2 seconds
+And I enter a body "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus eros in libero sagittis, at ornare leo rhoncus. Duis odio mauris, blandit ut blandit eu, luctus eu eros. Morbi quis massa in ante gravida posuere condimentum et dui. Mauris eu interdum urna. Nullam arcu ante, elementum at leo id, tincidunt sodales tellus. Etiam placerat enim et nisl tincidunt, vel aliquam leo ornare."
+And I wait for 2 seconds
+And I click publish
+And I wait for 2 seconds
+And I click publish post
+And I wait for 2 seconds
+And I confirm the publish
+And I wait for 2 seconds
+And I click on back to editor
+And I wait for 2 seconds
+And I click on title to edit it
+And I wait for 2 seconds
+And I enter a new title "EDITED"
+And I wait for 2 seconds
+And I click bodys again
+And I wait for 2 seconds
+And I enter a new body "EDITED/EDITED/EDITED"
+And I wait for 2 seconds
+And I click update
+And I wait for 2 seconds
+And I click settings post
+And I click delete post
+Then I click confirm
 
  @user17 @web
  Scenario: caso 17 TimeZone

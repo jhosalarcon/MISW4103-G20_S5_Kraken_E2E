@@ -12,7 +12,7 @@ When('I add code injection', async function() {
 })
 
 When('I validate code injection', async function() {
-    let body = await this.driver.$("body").getText();
+    let body = await this.driver.$("body");
     let text = await body.getText();
     assert.ok(text.includes("Test header"), `El texto "${text}" no incluye "Test header"`);
 })

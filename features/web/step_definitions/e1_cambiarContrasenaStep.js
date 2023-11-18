@@ -58,7 +58,7 @@ When('I go to logout', async function() {
     let element = await this.driver.$(".gh-user-avatar.relative");
     return await element.click();
 })
-When('I press the button sign out', async function() {
+Then('I press the button sign out', async function() {
     let element = await this.driver.$("/html[1]/body[1]/div[1]/div[1]/ul[1]/li[9]/a[1]");
     return await element.click();
 })
